@@ -3,7 +3,9 @@
 Library task
 
 ## Demo
-[Here](http://tomerdbz.co.il/Library)
+<a href="http://tomerdbz.co.il/Library">
+  <img src="src/assets/sample.png">
+</a>
 
 ## Dependencies
 This project was created with the following technologies:
