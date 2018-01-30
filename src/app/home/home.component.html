@@ -1,0 +1,27 @@
+<form [formGroup]="searchForm" id="searchForm">
+  <mat-form-field>
+    <mat-placeholder></mat-placeholder>
+    <input formControlName="search" matInput>
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</form>
+<div class="container-fluid">
+  <div class="row">
+    <app-book (data)="editBook($event)" (delete)="delete($event)" *ngFor="let book of books | async | search: searchText " [id]="book.name" class="col-md-6 col-lg-4 col-xl-2 mb-4"></app-book>
+  </div>
+  <button id="add" mat-fab color="accent" (click)="openDialog('book')"><i class="material-icons">add</i></button>
+</div>
+
+<div class="container-fluid">
+  <!--  Errors & Messages -->
+  <div class="row justify-content-center mt-5">
+    <mat-spinner [diameter]="50" [strokeWidth]="3" class="mt-5" *ngIf="loading" color="accent"></mat-spinner>
+    <div *ngIf="error">
+      <h1 class="display-2 mat-display-2">Opppss, Sorry but seems like there is an error on our side</h1>
+    </div>
+    <div *ngIf="!booksFlag &&  !loading && !error" class="text-center d-flex justify-content-center align-items-center flex-column">
+      <h1 class="mat-display-4">The library is empty now</h1>
+      <h2 id="adding" class="mat-display-3">Please add new book</h2>
+    </div>
+  </div>
+</div>

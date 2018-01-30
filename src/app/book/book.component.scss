@@ -1,0 +1,63 @@
+mat-card {
+  min-height: 500px;
+  max-width: 400px;
+  margin: 0 auto;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .35);
+  }
+  img {
+    max-height: 200px;
+  }
+  p {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 0;
+    padding: 10px;
+    text-align: left;
+    i {
+      padding-right: 10px;
+      color: #fbb42e;
+    }
+  }
+  .content-wrapper {
+    opacity: 0;
+    position: relative;
+    top: 100px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 5px;
+    transition: ease-in-out 0.27s;
+    #delete {
+      position: absolute;
+      right: -35px;
+      top: -140px;
+    }
+    mat-card-title {
+      font-size: 16px;
+    }
+  }
+  &:hover {
+    .content-wrapper {
+      opacity: 1;
+      transition: ease-in-out 0.27s;
+      z-index: 999;
+    }
+    &:after {
+      background-color: transparent;
+      transition: ease-in-out 0.27s;
+    }
+  }
+  .mat-card-actions {
+    margin: 0 auto;
+  }
+}

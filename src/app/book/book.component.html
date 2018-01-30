@@ -1,0 +1,15 @@
+<mat-card *ngIf="book" [ngStyle]="{'background': 'url(' + book?.image + ') center center/ 100% 100%'}">
+  <div class="content-wrapper justify-content-center align-items-center text-center align-middle">
+    <button id="delete" mat-mini-fab color="warn" (click)="deleteBook()"><i class="material-icons">delete</i></button>
+    <mat-card-header class="text-left justify-content-between d-flex">
+      <mat-card-title>{{ book?.name | capitalize}}</mat-card-title>
+      <mat-card-subtitle>{{ book?.author }} <br> {{ book?.date | date }}</mat-card-subtitle>
+      <button mat-icon-button (click)="editBook()">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ book?.description }}</p>
+    </mat-card-content>
+  </div>
+</mat-card>

@@ -1,0 +1,44 @@
+#add {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  color: white;
+  background-color: #fe393a;
+  z-index: 1000;
+}
+
+#searchForm {
+  display: flex;
+  position: relative;
+  color: inherit;
+  justify-content: center;
+  margin-top: -10px;
+  width: 100%;
+  padding: 0 15px;
+  mat-form-field.mat-form-field {
+    width: 100%;
+    .mat-input-wrapper {
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mat-display-4, .mat-typography .mat-display-4 {
+    font: 300 30px/11px Roboto, "Helvetica Neue", sans-serif;
+  }
+  .mat-display-3, .mat-typography .mat-display-3 {
+    font: 300 20px/11px Roboto, "Helvetica Neue", sans-serif;
+  }
+}
+
+@media screen and (min-width: 500px) {
+
+  #searchForm {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+    width: auto;
+  }
+}

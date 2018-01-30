@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed');
+
+mat-icon {
+  color: #010101;
+}
+
+#logo {
+  max-width: 230px;
+  max-height: 40px;
+}
+
+.navbar-brand {
+  font-family: 'Saira Extra Condensed', sans-serif !important;
+  font-size: 35px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  mat-icon {
+    position: absolute;
+    left: 23px;
+    z-index: 99;
+    color: white;
+  }
+}
+
+.hexagon {
+  position: relative;
+  width: 40px;
+  height: 23.09px;
+  background-color: #f04e49;
+  margin: 11.55px 0;
+  margin-right: 5px;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 11.55px solid #f04e49;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 11.55px solid #f04e49;
+}

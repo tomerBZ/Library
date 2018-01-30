@@ -1,0 +1,49 @@
+<form [formGroup]="addBookForm" (submit)="formSubmit(addBookForm)">
+  <div class="row">
+    <div class="col-12">
+      <div class="form-group">
+        <mat-form-field>
+          <mat-placeholder>Book Name</mat-placeholder>
+          <input name="name" formControlName="name" matInput required>
+          <mat-icon matPrefix>book</mat-icon>
+          <mat-error>{{ formErrors.name }}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field>
+          <mat-placeholder>Book Author</mat-placeholder>
+          <input formControlName="author" matInput required>
+          <mat-icon matPrefix>person</mat-icon>
+          <mat-error>{{ formErrors.author }}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field>
+          <mat-placeholder>Book Image Cover (url)</mat-placeholder>
+          <input formControlName="image" matInput required>
+          <mat-icon matPrefix>insert_photo</mat-icon>
+          <mat-error>{{ formErrors.image }}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field>
+          <mat-placeholder>Book Description</mat-placeholder>
+          <input name="description" autocomplete="off" formControlName="description" matInput required #search>
+          <mat-icon matPrefix>description</mat-icon>
+          <mat-error>{{ formErrors.description }}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field>
+          <input formControlName="date" matInput [matDatepicker]="picker" [max]="today" placeholder="Date Created">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker touchUi="true"></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-between">
+    <button color="accent" mat-raised-button>{{ buttonValue }}</button>
+    <button color="primary" mat-raised-button (click)="closeMe()">Cancel</button>
+  </div>
+</form>
