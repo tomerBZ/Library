@@ -61,3 +61,12 @@ mat-card {
     margin: 0 auto;
   }
 }
+
+@media screen and (max-width: 768px) {
+  mat-card {
+    #delete {
+      position: absolute;
+      right: -25px;
+    }
+  }
+}

@@ -52,12 +52,9 @@ export class ValidationService {
         const control = formToValidate.get(field);
         if (control && control.dirty && !control.valid) {
           const messages = this.validationMessages[formName][field];
-          console.log(this.validationMessages[formName][field]);
-          console.log(messages);
           for (const key in control.errors) {
             if (this[field] !== 0) {
               if (control.errors.hasOwnProperty(key)) {
-                console.log(key);
                 this.formErrors[field] += messages[key] + ' ';
               }
             }

@@ -9,7 +9,7 @@ import { AddBookDialogComponent } from '../add-book-dialog/add-book-dialog.compo
   styleUrls: ['./delete-prompt-dialog.component.scss']
 })
 export class DeletePromptDialogComponent implements OnInit {
-  private name: string;
+  public name: string;
   constructor(private _firebase: FirebaseService,
               public dialogRef: MatDialogRef<AddBookDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: any) {
   }
