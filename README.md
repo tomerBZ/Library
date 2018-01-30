@@ -4,7 +4,7 @@ Library task
 
 ## Demo
 <a href="http://tomerdbz.co.il/Library">
-  <img src="src/assets/sample.png">
+  <img src="src/assets/images/sample.png">
 </a>
 
 ## Dependencies
