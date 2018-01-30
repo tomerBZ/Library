@@ -3,7 +3,7 @@
 Library task
 
 ## Demo
-<a href="http://tomerdbz.co.il/Library">
+<a target="_blank" href="http://tomerdbz.co.il/Library">
   <img src="src/assets/images/sample.png">
 </a>
 
